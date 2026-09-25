@@ -1,0 +1,1043 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CICLA | Tutoriais</title>
+
+<link rel="icon" href="png icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+link
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Poppins",sans-serif;
+    background:#eef3e9;
+    color:#304936;
+}
+
+a{
+    text-decoration:none;
+}
+
+.topo{
+    height:90px;
+    background:#fffaf6;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 70px;
+    position:sticky;
+    top:0;
+    z-index:100;
+    border-bottom:1px solid #eee;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo > span{
+    width:45px;
+    height:45px;
+    background:#668968;
+    color:#f0789f;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:27px;
+    font-weight:800;
+}
+
+.logo strong,
+.logo small{
+    display:block;
+}
+
+.logo strong{
+    font-size:18px;
+    color:#31533a;
+}
+
+.logo small{
+    font-size:9px;
+    color:#777;
+}
+
+.menu{
+    display:flex;
+    gap:35px;
+}
+
+.menu a{
+    color:#304936;
+    font-size:14px;
+    font-weight:600;
+    padding:32px 0;
+    position:relative;
+}
+
+.menu a:hover,
+.menu .ativo{
+    color:#ed719b;
+}
+
+.menu .ativo::after{
+    content:"";
+    position:absolute;
+    bottom:20px;
+    left:0;
+    width:100%;
+    height:3px;
+    background:#ed719b;
+    border-radius:5px;
+}
+
+.colaborador{
+    background:#ed719b;
+    color:white;
+    padding:13px 22px;
+    border-radius:7px;
+    font-size:13px;
+    font-weight:600;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.cabecalho{
+    background:#ffe9dd;
+    padding:55px 70px;
+}
+
+.cabecalho small{
+    color:#668968;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.cabecalho h1{
+    font-size:42px;
+    margin:8px 0;
+    color:#294b32;
+}
+
+.cabecalho h1 span{
+    color:#ed719b;
+}
+
+.cabecalho p{
+    max-width:650px;
+    color:#59625b;
+    font-size:14px;
+    line-height:1.7;
+}
+
+
+/* =========================
+   FILTROS
+========================= */
+
+.filtros{
+    background:#fffaf6;
+    padding:25px 70px;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    border-bottom:1px solid #eee;
+}
+
+.filtros button{
+    border:1px solid #dce5d9;
+    background:#eef3e9;
+    color:#48604d;
+    padding:10px 17px;
+    border-radius:20px;
+    cursor:pointer;
+    font-family:inherit;
+    font-size:12px;
+}
+
+.filtros button:hover,
+.filtros button.ativo{
+    background:#ed719b;
+    color:white;
+    border-color:#ed719b;
+}
+
+.pesquisa{
+    padding:10px 17px;
+    border:1px solid #dce5d9;
+    border-radius:20px;
+    outline:none;
+    font-family:inherit;
+    width:220px;
+}
+
+
+/* =========================
+   MURAL
+========================= */
+
+.mural{
+    width:750px;
+    max-width:90%;
+    margin:40px auto;
+}
+
+
+/* =========================
+   POST
+========================= */
+
+.post{
+    background:#fffaf6;
+    border-radius:12px;
+    margin-bottom:30px;
+    overflow:hidden;
+    box-shadow:0 5px 18px rgba(42,70,48,.08);
+}
+
+.post-topo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:18px 22px;
+}
+
+.avatar{
+    width:42px;
+    height:42px;
+    background:#668968;
+    color:#f0789f;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:800;
+}
+
+.post-info strong{
+    display:block;
+    color:#31533a;
+    font-size:13px;
+}
+
+.post-info small{
+    color:#8a908b;
+    font-size:10px;
+}
+
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.post-conteudo{
+    padding:0 22px 22px;
+}
+
+.post-conteudo h2{
+    color:#304936;
+    font-size:23px;
+    margin-bottom:7px;
+}
+
+.categoria{
+    display:inline-block;
+    color:#ed719b;
+    font-size:9px;
+    font-weight:700;
+    letter-spacing:1px;
+    margin-bottom:12px;
+}
+
+.post-conteudo p{
+    color:#606860;
+    font-size:13px;
+    line-height:1.7;
+}
+
+
+/* =========================
+   IMAGEM
+========================= */
+
+.post-imagem{
+    width:100%;
+    max-height:420px;
+    object-fit:cover;
+    display:block;
+}
+
+
+/* =========================
+   YOUTUBE
+========================= */
+
+.youtube{
+    position:relative;
+    width:100%;
+    aspect-ratio:16/9;
+    background:#000;
+}
+
+.youtube iframe{
+    width:100%;
+    height:100%;
+    border:0;
+}
+
+
+/* =========================
+   LISTA DO TUTORIAL
+========================= */
+
+.passos{
+    margin-top:18px;
+    padding-left:20px;
+}
+
+.passos li{
+    color:#59625b;
+    font-size:13px;
+    margin-bottom:8px;
+}
+
+
+/* =========================
+   RODAPÉ DO POST
+========================= */
+
+.post-footer{
+    border-top:1px solid #eee;
+    padding:15px 22px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.post-footer span{
+    color:#8a908b;
+    font-size:10px;
+}
+
+.post-footer button{
+    border:0;
+    background:none;
+    color:#ed719b;
+    font-family:inherit;
+    font-weight:600;
+    cursor:pointer;
+}
+
+
+/* =========================
+   CONTRIBUIÇÃO
+========================= */
+
+.contribuir{
+    margin:50px 70px;
+    padding:35px 45px;
+    background:#6a8d6b;
+    border-radius:15px;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+}
+
+.contribuir h2{
+    font-size:24px;
+    margin:5px 0;
+}
+
+.contribuir p{
+    max-width:600px;
+    font-size:13px;
+    line-height:1.6;
+}
+
+.contribuir a{
+    background:#ed719b;
+    color:white;
+    padding:13px 20px;
+    border-radius:7px;
+    font-size:12px;
+    white-space:nowrap;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#31543e;
+    color:white;
+    padding:45px 70px;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:50px;
+}
+
+footer h3{
+    font-size:14px;
+    margin-bottom:15px;
+}
+
+footer p,
+footer a{
+    color:#dce8df;
+    font-size:12px;
+    line-height:1.8;
+}
+
+.copyright{
+    background:#294734;
+    color:#dce8df;
+    text-align:center;
+    padding:12px;
+    font-size:10px;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media(max-width:800px){
+
+    .topo{
+        height:auto;
+        padding:20px;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .menu{
+        order:3;
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:18px;
+    }
+
+    .menu a{
+        padding:8px;
+    }
+
+    .menu .ativo::after{
+        bottom:0;
+    }
+
+    .cabecalho{
+        padding:40px 30px;
+    }
+
+    .cabecalho h1{
+        font-size:34px;
+    }
+
+    .filtros{
+        padding:20px 30px;
+    }
+
+    .mural{
+        max-width:94%;
+    }
+
+    .contribuir{
+        margin:35px 30px;
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    footer{
+        grid-template-columns:1fr;
+        padding:40px 30px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     MENU
+========================= -->
+
+<header class="topo">
+
+    <div class="logo">
+
+        <span>C</span>
+
+        <div>
+            <strong>CICLA</strong>
+            <small>Rede sustentável</small>
+        </div>
+
+    </div>
+
+
+    <nav class="menu">
+
+        <a href="inicio.html">
+            Início
+        </a>
+
+        <a href="locais.html">
+            Locais
+        </a>
+
+        <a href="tutoriais.html" class="ativo">
+            Tutoriais
+        </a>
+
+        <a href="beneficios.html">
+            Benefícios
+        </a>
+
+        <a href="sobre.html">
+            Sobre o site
+        </a>
+
+    </nav>
+
+
+    <a href="#" class="colaborador">
+        Seja colaborador
+    </a>
+
+</header>
+
+
+
+<!-- =========================
+     CABEÇALHO
+========================= -->
+
+<section class="cabecalho">
+
+    <small>
+        CICLA • APRENDA
+    </small>
+
+    <h1>
+        Tutoriais para uma vida
+        <span>mais sustentável.</span>
+    </h1>
+
+    <p>
+        Encontre dicas, explicações e vídeos para
+        aprender mais sobre reciclagem, descarte
+        correto e sustentabilidade.
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     FILTROS
+========================= -->
+
+<div class="filtros">
+
+    <input
+        type="text"
+        class="pesquisa"
+        id="pesquisa"
+        placeholder="🔎 Pesquisar..."
+        oninput="pesquisar()"
+    >
+
+    <button
+        class="ativo"
+        onclick="filtrar('todos',this)"
+    >
+        Todos
+    </button>
+
+    <button
+        onclick="filtrar('reciclagem',this)"
+    >
+        ♻️ Reciclagem
+    </button>
+
+    <button
+        onclick="filtrar('sustentabilidade',this)"
+    >
+        🌱 Sustentabilidade
+    </button>
+
+    <button
+        onclick="filtrar('descarte',this)"
+    >
+        🗑️ Descarte
+    </button>
+
+</div>
+
+
+
+<!-- =========================
+     MURAL
+========================= -->
+
+<main class="mural" id="mural">
+
+
+    <!-- POST ESCRITO -->
+
+    <article
+        class="post"
+        data-categoria="reciclagem"
+    >
+
+        <div class="post-topo">
+
+            <div class="avatar">
+                C
+            </div>
+
+            <div class="post-info">
+
+                <strong>
+                    CICLA
+                </strong>
+
+                <small>
+                    Tutorial • Reciclagem
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <img
+            class="post-imagem"
+            src="img/separacao-lixo.jpg"
+            alt="Separação de resíduos"
+        >
+
+
+        <div class="post-conteudo">
+
+            <span class="categoria">
+                ♻️ RECICLAGEM
+            </span>
+
+            <h2>
+                Como separar o lixo corretamente?
+            </h2>
+
+            <p>
+                Separar os resíduos corretamente é um dos
+                primeiros passos para facilitar a reciclagem.
+            </p>
+
+
+            <ol class="passos">
+
+                <li>
+                    Separe papel e papelão.
+                </li>
+
+                <li>
+                    Separe plásticos.
+                </li>
+
+                <li>
+                    Separe metais.
+                </li>
+
+                <li>
+                    Separe vidros.
+                </li>
+
+                <li>
+                    Coloque os resíduos orgânicos em outro recipiente.
+                </li>
+
+            </ol>
+
+        </div>
+
+
+        <div class="post-footer">
+
+            <span>
+                📖 Tutorial escrito
+            </span>
+
+            <button>
+                ♡ Gostei
+            </button>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- POST YOUTUBE -->
+
+    <article
+        class="post"
+        data-categoria="sustentabilidade"
+    >
+
+        <div class="post-topo">
+
+            <div class="avatar">
+                C
+            </div>
+
+            <div class="post-info">
+
+                <strong>
+                    CICLA
+                </strong>
+
+                <small>
+                    Vídeo • Sustentabilidade
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="post-conteudo">
+
+            <span class="categoria">
+                🌱 SUSTENTABILIDADE
+            </span>
+
+            <h2>
+                Hábitos sustentáveis para começar hoje
+            </h2>
+
+        </div>
+
+
+        <div class="youtube">
+
+            <iframe
+                src="https://www.youtube.com/embed/COLOQUE_ID_AQUI"
+                title="Vídeo sobre sustentabilidade"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+
+        <div class="post-conteudo">
+
+            <p>
+                Neste vídeo você pode aprender algumas
+                atitudes simples que ajudam a diminuir
+                o desperdício no dia a dia.
+            </p>
+
+        </div>
+
+
+        <div class="post-footer">
+
+            <span>
+                ▶️ Vídeo do YouTube
+            </span>
+
+            <button>
+                ♡ Gostei
+            </button>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- OUTRO POST -->
+
+    <article
+        class="post"
+        data-categoria="descarte"
+    >
+
+        <div class="post-topo">
+
+            <div class="avatar">
+                C
+            </div>
+
+            <div class="post-info">
+
+                <strong>
+                    CICLA
+                </strong>
+
+                <small>
+                    Tutorial • Descarte
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="post-conteudo">
+
+            <span class="categoria">
+                🗑️ DESCARTE
+            </span>
+
+            <h2>
+                Onde descartar pilhas?
+            </h2>
+
+            <p>
+                Pilhas não devem ser colocadas junto ao
+                lixo comum. Procure pontos de coleta
+                específicos para esse tipo de material.
+            </p>
+
+        </div>
+
+
+        <div class="post-footer">
+
+            <span>
+                📖 Tutorial escrito
+            </span>
+
+            <button>
+                ♡ Gostei
+            </button>
+
+        </div>
+
+    </article>
+
+
+</main>
+
+
+
+<!-- =========================
+     CONTRIBUIÇÃO
+========================= -->
+
+<section class="contribuir">
+
+    <div>
+
+        <small>
+            🌿 FAÇA PARTE
+        </small>
+
+        <h2>
+            Conhece alguma técnica sustentável?
+        </h2>
+
+        <p>
+            Compartilhe seus conhecimentos com a
+            comunidade CICLA.
+        </p>
+
+    </div>
+
+    <a href="contato.html">
+        Enviar tutorial
+    </a>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div>
+
+        <div class="logo">
+
+            <span>C</span>
+
+            <div>
+                <strong>CICLA</strong>
+                <small>Rede sustentável</small>
+            </div>
+
+        </div>
+
+        <p>
+            Conectando pessoas, iniciativas e soluções
+            para um futuro mais consciente.
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <h3>Navegação</h3>
+
+        <a href="inicio.html">
+            Início
+        </a>
+
+        <a href="locais.html">
+            Locais
+        </a>
+
+        <a href="tutoriais.html">
+            Tutoriais
+        </a>
+
+        <a href="beneficios.html">
+            Benefícios
+        </a>
+
+    </div>
+
+
+    <div>
+
+        <h3>Contato</h3>
+
+        <p>
+            contato@cicla.com.br
+        </p>
+
+        <p>
+            (62) 99999-9999
+        </p>
+
+        <p>
+            Anápolis - GO
+        </p>
+
+    </div>
+
+</footer>
+
+
+<div class="copyright">
+
+    © 2026 CICLA — Rede sustentável
+
+</div>
+
+
+
+<script>
+
+/* =========================
+   FILTRAR
+========================= */
+
+function filtrar(categoria, botao){
+
+    const posts =
+        document.querySelectorAll(".post");
+
+    const botoes =
+        document.querySelectorAll(".filtros button");
+
+    botoes.forEach(btn =>
+        btn.classList.remove("ativo")
+    );
+
+    botao.classList.add("ativo");
+
+
+    posts.forEach(post => {
+
+        if(
+            categoria === "todos" ||
+            post.dataset.categoria === categoria
+        ){
+
+            post.style.display = "block";
+
+        }else{
+
+            post.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+/* =========================
+   PESQUISAR
+========================= */
+
+function pesquisar(){
+
+    const texto =
+        document
+        .getElementById("pesquisa")
+        .value
+        .toLowerCase();
+
+    const posts =
+        document.querySelectorAll(".post");
+
+
+    posts.forEach(post => {
+
+        const conteudo =
+            post.innerText.toLowerCase();
+
+        if(conteudo.includes(texto)){
+
+            post.style.display = "block";
+
+        }else{
+
+            post.style.display = "none";
+
+        }
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>
+```
